@@ -1,48 +1,27 @@
 import React from "react";
-import Star from "../assets/Star.png";
-import CardImage1 from "../assets/image_12.png";
-import CardImage2 from "../assets/wedding-photography.png";
-import CardImage3 from "../assets/mountain-bike.png";
 
-function Card() {
+function Card(props) {
+  let badgeText;
+  if (props.openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (props.location === "Online") {
+    badgeText = "ONLINE";
+  }
+
   return (
     <section className="card">
+      {badgeText && <div className="card--badge">{badgeText}</div>}
       <div className="card--div">
-        <img src={CardImage1} className="card--image"/>
+        <img src={`../assets/${props.coverImg}`} className="card--image" />
         <div className="card--star">
-          <img src={Star} className="star" />
-          <h3 className="card--text--star">5.0</h3>
-          <h3 className="card--text--fade">(6) .USA</h3>
+          <img src="../assets/Star.png" className="star" />
+          <h3 className="card--text--star">{props.stats.rating}</h3>
+          <h3 className="card--text--fade">({props.stats.reviewCount}) • </h3>
+          <h3 className="card--text--fade">{props.location}</h3>
         </div>
-        <p className="card--text--name">Life lessons with Katie Zaferes</p>
+        <p className="card--text--name">{props.title}</p>
         <div className="card--text--bottom">
-          <p className="card--text--price">From $136</p>
-          <p className="card--text--name">/ Person</p>
-        </div>
-      </div>
-      <div className="card--div">
-        <img src={CardImage2} className="card--image"/>
-        <div className="card--star">
-          <img src={Star} className="star" />
-          <h3 className="card--text--star">5.0</h3>
-          <h3 className="card--text--fade">(30) .USA</h3>
-        </div>
-        <p className="card--text--name">Learn wedding photography</p>
-        <div className="card--text--bottom">
-          <p className="card--text--price">From $125</p>
-          <p className="card--text--name">/ Person</p>
-        </div>
-      </div>
-      <div className="card--div">
-        <img src={CardImage3} className="card--image"/>
-        <div className="card--star">
-          <img src={Star} className="star" />
-          <h3 className="card--text--star">4.8</h3>
-          <h3 className="card--text--fade">(2) .USA</h3>
-        </div>
-        <p className="card--text--name">Group Mountain Biking</p>
-        <div className="card--text--bottom">
-          <p className="card--text--price">From $50</p>
+          <p className="card--text--price">From ${props.price}</p>
           <p className="card--text--name">/ Person</p>
         </div>
       </div>
