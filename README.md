@@ -1,4 +1,4 @@
-I made the air bnb clone experience site to sharpen my react and css skills.
+I made the air bnb clone experience site to sharpen my react (especially props) and css skills.
 It doesn't have funtionality yet. I only tried to get the UI right.
 Here's the live site link: https://shimmering-treacle-180653.netlify.app/
 Let me know how you like it. Thank you.
