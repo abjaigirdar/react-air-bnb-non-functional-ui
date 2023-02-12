@@ -1,5 +1,7 @@
 I made the air bnb clone experience site to sharpen my react (especially props) and css skills. <br>
-It doesn't have funtionality yet. I only tried to get the UI right. <br>
+I also integrated a Data.JSX file to get a better understanding on data driven components. <br>
+It doesn't have funtionality yet. <br>
+I only tried to get the UI right. <br>
 Here's the live site link: https://shimmering-treacle-180653.netlify.app/ <br>
 Let me know how you like it. Thank you. <br>
 
